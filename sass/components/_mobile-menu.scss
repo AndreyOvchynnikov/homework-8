@@ -1,12 +1,13 @@
 .mobile-menu {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
     width: 100vw;
+    max-width: 480px;
     height: 100vh;
     padding: 48px 40px;
     background-color: var(--third-color);
-    transform: translateY(-100%);
+    transform: translateY(-100%) translateX(-50%);
     transition: transform 250ms linear;
     overflow: scroll;  
 }
@@ -30,7 +31,7 @@
     height: 40px;
 }
 .is-open{
-    transform: translateY(0);
+    transform: translateY(0) translateX(-50%);
 }
 .mobile-menu-navigation__list{
     margin-bottom: 302px;

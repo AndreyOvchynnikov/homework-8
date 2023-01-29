@@ -21,4 +21,13 @@ color: var(--primary-color);
 .logo__dark-theme{
     color: var(--third-color);
 }
-
+@media screen and (min-width: 768px) {
+    .logo{
+        margin-right: 88px; 
+    }
+}
+@media screen and (min-width: 1200px) {
+    .logo{
+        margin-right: 93px; 
+    }
+}
