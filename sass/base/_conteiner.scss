@@ -1,0 +1,26 @@
+.conteiner{
+    margin: 0 auto;
+    width: 1200px;
+
+    .header &{
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-top: none;
+    min-height: 80px;
+    }
+    .hero &{
+    padding-top: 200px;
+    padding-bottom: 200px;  
+    }
+    .team &,
+    .clients &,
+    .portfolio &{
+    padding: 94px 15px;
+    }
+    .footer &{
+    padding: 60px 15px;
+    display: flex;
+    align-items: baseline;
+    }
+}
