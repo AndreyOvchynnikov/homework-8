@@ -1,26 +1,53 @@
-.conteiner{
-    margin: 0 auto;
-    width: 1200px;
-
-    .header &{
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
-    border-top: none;
-    min-height: 80px;
-    }
-    .hero &{
-    padding-top: 200px;
-    padding-bottom: 200px;  
-    }
-    .team &,
-    .clients &,
-    .portfolio &{
-    padding: 94px 15px;
-    }
-    .footer &{
-    padding: 60px 15px;
-    display: flex;
-    align-items: baseline;
+.conteiner {
+    padding-left: 15px;
+    padding-right: 15px;
+        .header &{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }  
+}
+@media screen and (min-width: 480px) {
+    .conteiner {
+        width: 480px;  
+        margin: 0 auto;
+        
     }
 }
+@media screen and (min-width: 768px) {
+    .conteiner{
+        width: 768px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .conteiner{
+        width: 1200px;
+    }
+}
+
+// .conteiner{
+//     margin: 0 auto;
+//     width: 1200px;
+
+//     .header &{
+//     display: flex;
+//     align-items: center;
+//     padding: 0 15px;
+//     border-top: none;
+//     min-height: 80px;
+//     }
+//     .hero &{
+//     padding-top: 200px;
+//     padding-bottom: 200px;  
+//     }
+//     .team &,
+//     .clients &,
+//     .portfolio &{
+//     padding: 94px 15px;
+//     }
+//     .footer &{
+//     padding: 60px 15px;
+//     display: flex;
+//     align-items: baseline;
+//     }
+// }
