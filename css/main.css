@@ -565,6 +565,7 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: #212121;
+    transition: color 250ms linear;
   }
   .navigation__link:hover, .navigation__link:focus {
     color: var(--accent-color);
@@ -596,14 +597,18 @@ img {
     line-height: 1.17;
     letter-spacing: 0.02em;
     color: var(--secondary-color);
-    fill: var(--secondary-color);
+    transition: color 250ms linear;
   }
   .contacts-list__link:hover, .contacts-list__link:focus {
     color: var(--accent-color);
-    fill: var(--accent-color);
   }
   .contacts-list__icon {
     margin-right: 8px;
+    fill: var(--secondary-color);
+    transition: fill 250ms linear;
+  }
+  .contacts-list__link:hover .contacts-list__icon, .contacts-list__link:focus .contacts-list__icon {
+    fill: var(--accent-color);
   }
   .contacts-list__icon-email {
     width: 14px;
@@ -649,12 +654,11 @@ img {
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
+  margin-bottom: 60px;
   background-color: rgb(196, 196, 196);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/herobg-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: auto;
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
@@ -663,7 +667,6 @@ img {
 }
 
 .hero__title {
-  margin: 0 auto;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.61;
@@ -680,7 +683,8 @@ img {
   }
   .hero__title {
     width: 360px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -698,6 +702,7 @@ img {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+    margin-bottom: 94px;
     min-width: 1200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/herobg-desktop.jpg");
   }
@@ -715,27 +720,20 @@ img {
   }
 }
 .benefits {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 60px;
 }
 
-.benefits-list__item {
-  width: 450px;
-}
 .benefits-list__item:not(:last-child) {
   margin-bottom: 30px;
 }
 
 .benefits-list__conteiner {
   display: flex;
-  width: 450px;
-  height: 120px;
   background-color: rgb(245, 244, 250);
   border-radius: 4px;
   align-items: center;
   justify-content: center;
+  height: 120px;
   margin-bottom: 30px;
 }
 
@@ -761,6 +759,14 @@ img {
   color: var(--secondary-color);
 }
 
+@media screen and (min-width: 480px) {
+  .benefits-list__item {
+    width: 450px;
+  }
+  .benefits-list__conteiner {
+    width: 450px;
+  }
+}
 @media screen and (min-width: 768px) {
   .benefits-list {
     display: flex;
@@ -782,8 +788,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .benefits {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    margin-bottom: 94px;
   }
   .benefits-list__item {
     width: 270px;
@@ -799,6 +804,7 @@ img {
 @media screen and (min-width: 1200px) {
   .development {
     display: block;
+    margin-bottom: 94px;
   }
   .development__title {
     font-weight: 700;
@@ -810,7 +816,6 @@ img {
   }
   .development__list {
     display: flex;
-    margin-bottom: 94px;
   }
   .development__item {
     position: relative;
@@ -850,11 +855,77 @@ img {
 }
 
 .team-card__item {
-  width: 450px;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: var(--third-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-card__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
+.team-card__img {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.team-card__conteiner {
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+
+.team-card__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.team-card__text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 480px) {
+  .team__title {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .team-card__item {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .team-card__item {
+    width: 354px;
+  }
+  .team-card__item:not(:last-child) {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-card__conteiner {
+    padding-bottom: 30px;
+  }
+  .team-card__item {
+    width: 270px;
+  }
+  .team__title {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+}
 .clients__title {
   text-align: center;
   font-family: var(--main-font);

@@ -4,6 +4,7 @@
 @media screen and (min-width: 1200px) {
     .development{
     display: block;
+    margin-bottom: 94px;
 }
     .development__title {
     font-weight: 700;
@@ -15,7 +16,6 @@
     }
     .development__list{
     display: flex;
-    margin-bottom: 94px;
 }
 
     .development__item{

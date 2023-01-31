@@ -49,6 +49,7 @@ display: none;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: #212121;
+    transition: color 250ms linear;
 
         &:hover,
         &:focus{
@@ -86,16 +87,22 @@ display: none;
     line-height: 1.17;
     letter-spacing: 0.02em;
     color: var(--secondary-color);
-    fill: var(--secondary-color);
+    transition: color 250ms linear;
 
         &:hover,
         &:focus{
             color: var(--accent-color);
-            fill: var(--accent-color);
         }
   }
     .contacts-list__icon{
         margin-right: 8px;
+        fill: var(--secondary-color);
+        transition: fill 250ms linear;
+
+        .contacts-list__link:hover &,
+        .contacts-list__link:focus &{
+        fill: var(--accent-color);
+        }
     }
     .contacts-list__icon-email{
         width: 14px;
@@ -112,6 +119,7 @@ display: none;
     padding-bottom: 24px;
     }
     .navigation__link--active{
+        
         &::after{
         bottom: -26px;
         }
