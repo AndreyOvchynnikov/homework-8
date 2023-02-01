@@ -28,18 +28,22 @@
                         <a class="navigation__link link" href="index.html">Студия</a>
                     </li>
                     <li class="navigation__item">
-                        <a class="navigation__link navigation__link--active link link"
-                            href="portfolio.html">Портфолио</a>
+                        <a class="navigation__link navigation__link--active link" href="portfolio.html">Портфолио</a>
                     </li>
                     <li class="navigation__item">
                         <a class="navigation__link link" href="">Контакты</a>
                     </li>
                 </ul>
             </nav>
+            <button type="button" class="burger-button" data-menu-button>
+                <svg class="burger-button__icon">
+                    <use href="./images/icons.svg#icon-menu_40px"></use>
+                </svg>
+            </button>
             <ul class="contacts-list list">
                 <li class="contacts-list__item">
                     <a class="contacts-list__link link" href="mailto:info@devstudio.com">
-                        <svg class="contacts-list__icon" width="16px" height="12px">
+                        <svg class="contacts-list__icon contacts-list__icon-email">
                             <use href="./images/icons.svg#icon-envelope"></use>
                         </svg>
                         info@devstudio.com
@@ -47,11 +51,55 @@
                 </li>
                 <li class="contacts-list__item">
                     <a class="contacts-list__link link" href="tel:+380961111111">
-                        <svg class="contacts-list__icon" width="10px" height="16px">
+                        <svg class="contacts-list__icon contacts-list__icon-tel">
                             <use href="./images/icons.svg#icon-smartphone"></use>
                         </svg>
                         +38 096 111 11 11
                     </a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile-menu" data-menu>
+            <button class="mobile-menu__button" type="button" data-menu-close>
+                <svg class="mobile-menu__icon">
+                    <use href="./images/icons.svg#icon-close_40px"></use>
+                </svg>
+            </button>
+            <nav class="mobile-menu-navigation">
+                <ul class="mobile-menu-navigation__list list">
+                    <li class="mobile-menu-navigation__item">
+                        <a href="index.html"
+                            class="mobile-menu-navigation__link mobile-menu-navigation__link--active-link link">Студия</a>
+                    </li>
+                    <li class="mobile-menu-navigation__item">
+                        <a href="portfolio.html" class="mobile-menu-navigation__link link">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu-navigation__item">
+                        <a href="" class="mobile-menu-navigation__link link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="mobile-menu-contacts list">
+                <li class="mobile-menu-contacts__item">
+                    <a href="tel:+380961111111" class="mobile-menu-contacts__tel-link link">+38 096 111 11 11</a>
+                </li>
+                <li class="mobile-menu-contacts__item">
+                    <a href="mailto:info@devstudio.com"
+                        class="mobile-menu-contacts__email-link link">info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="mobile-menu-social list">
+                <li class="mobile-menu-social__item">
+                    <a href="" class="mobile-menu-social__link link">Instagram</a>
+                </li>
+                <li class="mobile-menu-social__item">
+                    <a href="" class="mobile-menu-social__link link">Twitter</a>
+                </li>
+                <li class="mobile-menu-social__item">
+                    <a href="" class="mobile-menu-social__link link">Facebook</a>
+                </li>
+                <li class="mobile-menu-social__item">
+                    <a href="" class="mobile-menu-social__link link">LinkedIn</a>
                 </li>
             </ul>
         </div>
@@ -84,8 +132,27 @@
                     <li class="portfolio-card-set__item">
                         <a class="portfolio-card-set__link link" href="">
                             <div class="portfolio-card-set__link-conteiner">
-                                <img src="./portfolio-images/project-1.jpg" alt="Ноутбук с открытым сайтом" width="370"
-                                    height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/project1-desktop.webp 1x, ./images/portfolio/project1-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project1-desktop.jpg 1x, ./images/portfolio/project1-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/project1-tablet.webp 1x, ./images/portfolio/project1-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project1-tablet.jpg 1x, ./images/portfolio/project1-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/project1-mobile.webp 1x, ./images/portfolio/project1-mobile@2x.webp 2x"
+                                        media="(min-width: 480px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project1-mobile.jpg 1x, ./images/portfolio/project1-mobile@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                                    <img src="./images/portfolio/project1-mobile.jpg" alt="Ноутбук с открытым сайтом">
+                                </picture>
                                 <p class="portfolio-card-set__overlay">Ресурс предлагает комплексные предложения с
                                     разным
                                     уровнем
@@ -101,8 +168,27 @@
                     <li class="portfolio-card-set__item">
                         <a class="portfolio-card-set__link link" href="">
                             <div class="portfolio-card-set__link-conteiner">
-                                <img src="./portfolio-images/project-2.jpg" alt="Два баскетболиста" width="370"
-                                    height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/project2-desktop.webp 1x, ./images/portfolio/project2-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project2-desktop.jpg 1x, ./images/portfolio/project2-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/project2-tablet.webp 1x, ./images/portfolio/project2-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project2-tablet.jpg 1x, ./images/portfolio/project2-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/project2-mobile.webp 1x, ./images/portfolio/project2-mobile@2x.webp 2x"
+                                        media="(min-width: 480px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project2-mobile.jpg 1x, ./images/portfolio/project2-mobile@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                                    <img src="../images/portfolio/project2-mobile.jpg" alt="Два баскетболиста">
+                                </picture>
                                 <p class="portfolio-card-set__overlay">Ресурс предлагает комплексные предложения с
                                     разным
                                     уровнем
@@ -120,7 +206,27 @@
                     <li class="portfolio-card-set__item">
                         <a class="portfolio-card-set__link link" href="">
                             <div class="portfolio-card-set__link-conteiner">
-                                <img src="./portfolio-images/project-3.jpg" alt="Рыба" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/project3-desktop.webp 1x, ./images/portfolio/project3-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project3-desktop.jpg 1x, ./images/portfolio/project3-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/project3-tablet.webp 1x, ./images/portfolio/project3-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project3-tablet.jpg 1x, ./images/portfolio/project3-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/project3-mobile.webp 1x, ./images/portfolio/project3-mobile@2x.webp 2x"
+                                        media="(min-width: 480px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project3-mobile.jpg 1x, ./images/portfolio/project3-mobile@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                                    <img src="./images/portfolio/project3-mobile.jpg" alt="Рыба">
+                                </picture>
                                 <p class="portfolio-card-set__overlay">Ресурс предлагает комплексные предложения с
                                     разным
                                     уровнем
@@ -136,7 +242,28 @@
                     <li class="portfolio-card-set__item">
                         <a class="portfolio-card-set__link link" href="">
                             <div class="portfolio-card-set__link-conteiner">
-                                <img src="./portfolio-images/project-4.jpg" alt="Наушники" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/project4-desktop.webp 1x, ./images/portfolio/project4-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project4-desktop.jpg 1x, ./images/portfolio/project4-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/project4-tablet.webp 1x, ./images/portfolio/project4-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project4-tablet.jpg 1x, ./images/portfolio/project4-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/project4-mobile.webp 1x, ./images/portfolio/project4-mobile@2x.webp 2x"
+                                        media="(min-width: 480px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project4-mobile.jpg 1x, ./images/portfolio/project4-mobile@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                                    <img src="./images/portfolio/project4-mobile.jpg" alt="Наушники">
+                                </picture>
+
                                 <p class="portfolio-card-set__overlay">Ресурс предлагает комплексные предложения с
                                     разным
                                     уровнем
@@ -152,7 +279,27 @@
                     <li class="portfolio-card-set__item">
                         <a class="portfolio-card-set__link link" href="">
                             <div class="portfolio-card-set__link-conteiner">
-                                <img src="./portfolio-images/project-5.jpg" alt="Две коробки" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/project5-desktop.webp 1x, ./images/portfolio/project5-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project5-desktop.jpg 1x, ./images/portfolio/project5-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/project5-tablet.webp 1x, ./images/portfolio/project5-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project5-tablet.jpg 1x, ./images/portfolio/project5-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/project5-mobile.webp 1x, ./images/portfolio/project5-mobile@2x.webp 2x"
+                                        media="(min-width: 480px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project5-mobile.jpg 1x, ./images/portfolio/project5-mobile@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                                    <img src="./images/portfolio/project5-mobile.jpg" alt="Две коробки">
+                                </picture>
                                 <p class="portfolio-card-set__overlay">Ресурс предлагает комплексные предложения с
                                     разным
                                     уровнем
@@ -168,8 +315,27 @@
                     <li class="portfolio-card-set__item">
                         <a class="portfolio-card-set__link link" href="">
                             <div class="portfolio-card-set__link-conteiner">
-                                <img src="./portfolio-images/project-6.jpg" alt="Монитор с картой земли" width="370"
-                                    height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/project6-desktop.webp 1x, ./images/portfolio/project6-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project6-desktop.jpg 1x, ./images/portfolio/project6-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/project6-tablet.webp 1x, ./images/portfolio/project6-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project6-tablet.jpg 1x, ./images/portfolio/project6-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/project6-mobile.webp 1x, ./images/portfolio/project6-mobile@2x.webp 2x"
+                                        media="(min-width: 480px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project6-mobile.jpg 1x, ./images/portfolio/project6-mobile@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                                    <img src="./images/portfolio/project6-mobile.jpg" alt="Монитор с картой земли">
+                                </picture>
                                 <p class="portfolio-card-set__overlay">Ресурс предлагает комплексные предложения с
                                     разным
                                     уровнем
@@ -185,8 +351,27 @@
                     <li class="portfolio-card-set__item">
                         <a class="portfolio-card-set__link link" href="">
                             <div class="portfolio-card-set__link-conteiner">
-                                <img src="./portfolio-images/project-7.jpg" alt="Открытая книга" width="370"
-                                    height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/project7-desktop.webp 1x, ./images/portfolio/project7-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project7-desktop.jpg 1x, ./images/portfolio/project7-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/project7-tablet.webp 1x, ./images/portfolio/project7-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project7-tablet.jpg 1x, ./images/portfolio/project7-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/project7-mobile.webp 1x, ./images/portfolio/project7-mobile@2x.webp 2x"
+                                        media="(min-width: 480px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project7-mobile.jpg 1x, ./images/portfolio/project7-mobile@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                                    <img src="./images/portfolio/project7-mobile.jpg" alt="Открытая книга">
+                                </picture>
                                 <p class="portfolio-card-set__overlay">Ресурс предлагает комплексные предложения с
                                     разным
                                     уровнем
@@ -203,8 +388,27 @@
                     <li class="portfolio-card-set__item">
                         <a class="portfolio-card-set__link link" href="">
                             <div class="portfolio-card-set__link-conteiner">
-                                <img src="./portfolio-images/project-8.jpg" alt="Бирка с одежды" width="370"
-                                    height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/project8-desktop.webp 1x, ./images/portfolio/project8-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project8-desktop.jpg 1x, ./images/portfolio/project8-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/project8-tablet.webp 1x, ./images/portfolio/project8-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project8-tablet.jpg 1x, ./images/portfolio/project8-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/project8-mobile.webp 1x, ./images/portfolio/project8-mobile@2x.webp 2x"
+                                        media="(min-width: 480px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project8-mobile.jpg 1x, ./images/portfolio/project8-mobile@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                                    <img src="./images/portfolio/project8-mobile.jpg" alt="Бирка с одежды">
+                                </picture>
                                 <p class="portfolio-card-set__overlay">Ресурс предлагает комплексные предложения с
                                     разным
                                     уровнем
@@ -220,8 +424,28 @@
                     <li class="portfolio-card-set__item">
                         <a class="portfolio-card-set__link link" href="">
                             <div class="portfolio-card-set__link-conteiner">
-                                <img src="./portfolio-images/project-9.jpg" alt="Человек работает за компьютером"
-                                    width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/project9-desktop.webp 1x, ./images/portfolio/project9-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project9-desktop.jpg 1x, ./images/portfolio/project9-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/project9-tablet.webp 1x, ./images/portfolio/project9-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project9-tablet.jpg 1x, ./images/portfolio/project9-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/project9-mobile.webp 1x, ./images/portfolio/project9-mobile@2x.webp 2x"
+                                        media="(min-width: 480px)" type="image/webp">
+                                    <source
+                                        srcset="./images/portfolio/project9-mobile.jpg 1x, ./images/portfolio/project9-mobile@2x.jpg 2x"
+                                        media="(min-width: 480px)">
+                                    <img src="./images/portfolio/project9-mobile.jpg"
+                                        alt="Человек работает за компьютером">
+                                </picture>
                                 <p class="portfolio-card-set__overlay">Ресурс предлагает комплексные предложения с
                                     разным
                                     уровнем
@@ -244,22 +468,24 @@
     <!-- ======== FOOTER ======== -->
     <footer class="footer">
         <div class="conteiner">
-            <div class="footer__adress-conteiner">
+            <div class="center">
                 <a class="logo link" href="index.html" lang="en">Web<span class="logo__dark-theme">Studio</span></a>
-                <address class="address">
-                    <a class="adress__link link" href="https://goo.gl/maps/y6NcmPz2KW6kS1Qi8" target="_blank"
-                        rel="noopener noreferer">г. Киев,
-                        пр-т
-                        Леси Украинки, 26</a>
-                    <ul class="list">
-                        <li class="adress__item">
-                            <a class="adress__link-email link" href="mailto:info@example.com">info@example.com</a>
-                        </li>
-                        <li class="adress__item">
-                            <a class="adress__link-tel link" href="tel:+380991111111">+38 099 111 11 11</a>
-                        </li>
-                    </ul>
-                </address>
+                <div class="footer__adress-conteiner">
+                    <address class="address">
+                        <a class="adress__link link" href="https://goo.gl/maps/y6NcmPz2KW6kS1Qi8" target="_blank"
+                            rel="noopener noreferer">г. Киев,
+                            пр-т
+                            Леси Украинки, 26</a>
+                        <ul class="address__contacts-list list">
+                            <li class="adress__item">
+                                <a class="adress__link-email link" href="mailto:info@example.com">info@example.com</a>
+                            </li>
+                            <li class="adress__item">
+                                <a class="adress__link-tel link" href="tel:+380991111111">+38 099 111 11 11</a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
             </div>
             <div class="footer__social-links-conteiner">
                 <p class="footer__social-links-text">присоединяйтесь</p>
@@ -310,6 +536,7 @@
     </footer>
     <!-- ====== END FOOTER ====== -->
 
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

@@ -50,6 +50,7 @@ ul, ol {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 .link {
@@ -202,6 +203,10 @@ img {
   margin-bottom: 302px;
 }
 
+.mobile-menu-navigation__item {
+  margin-left: auto;
+  margin-right: auto;
+}
 .mobile-menu-navigation__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -228,7 +233,6 @@ img {
 }
 
 .mobile-menu-contacts__tel-link {
-  font-family: var(--main-font);
   font-weight: 500;
   font-size: 34px;
   line-height: 1.18;
@@ -237,7 +241,6 @@ img {
 }
 
 .mobile-menu-contacts__email-link {
-  font-family: var(--main-font);
   font-weight: 500;
   font-size: 24px;
   line-height: 1.17;
