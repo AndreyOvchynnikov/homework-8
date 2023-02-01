@@ -10,10 +10,6 @@ color: var(--accent-color);
     &:focus {
     text-decoration: underline;
     }
-    .footer &{
-    display: block;
-    margin-bottom: 20px;
-    }
 }
 .logo__light-theme{
 color: var(--primary-color); 
@@ -23,11 +19,18 @@ color: var(--primary-color);
 }
 @media screen and (min-width: 768px) {
     .logo{
-        margin-right: 88px; 
+        .header &{
+        margin-right: 88px;
+        } 
     }
 }
 @media screen and (min-width: 1200px) {
     .logo{
-        margin-right: 93px; 
+        font-size: 26px;
+        line-height: 1.19;
+        
+        .header &{
+        margin-right: 93px;
+        } 
     }
 }
