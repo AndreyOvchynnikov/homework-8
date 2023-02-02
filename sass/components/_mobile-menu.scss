@@ -10,6 +10,8 @@
     transform: translateY(-100%) translateX(-50%);
     transition: transform 250ms linear;
     overflow: scroll;  
+    display: flex;
+    flex-direction: column;
 }
 
 .mobile-menu__button{
@@ -79,8 +81,10 @@ color: var(--secondary-color);
 }
 .mobile-menu-social{
     display: flex;
+    flex-wrap: wrap;
 }
 .mobile-menu-social__item{
+    margin-bottom: 15px;
     
     &:not(:first-child){
         margin-left: 10px;
