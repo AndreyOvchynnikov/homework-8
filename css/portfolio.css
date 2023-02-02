@@ -140,6 +140,7 @@ img {
   overflow: scroll;
   display: flex;
   flex-direction: column;
+  z-index: 2;
 }
 
 .mobile-menu__button {
