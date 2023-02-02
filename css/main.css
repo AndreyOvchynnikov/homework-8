@@ -175,8 +175,6 @@ img {
   transform: translateY(-100%) translateX(-50%);
   transition: transform 250ms linear;
   overflow: scroll;
-  display: flex;
-  flex-direction: column;
   z-index: 2;
 }
 

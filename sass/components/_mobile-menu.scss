@@ -9,9 +9,7 @@
     background-color: var(--third-color);
     transform: translateY(-100%) translateX(-50%);
     transition: transform 250ms linear;
-    overflow: scroll;  
-    display: flex;
-    flex-direction: column;
+    overflow: scroll;
     z-index: 2;
 }
 .mobile-menu__button{
@@ -57,7 +55,6 @@
     color: var(--accent-color);
 }
 .mobile-menu-contacts{
-   
     margin-bottom: 64px;
 }
 .mobile-menu-contacts__item{
