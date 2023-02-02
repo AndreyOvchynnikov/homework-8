@@ -313,8 +313,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 580px;
+  width: 450px;
+  height: 609px;
   background-color: #FFFFFF;
   padding: 40px;
 }
@@ -337,15 +337,19 @@ img {
   fill: var(--accent-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .modal-window {
+    width: 528px;
+    height: 580px;
+  }
+}
 .modal-form__text {
   display: block;
   text-align: center;
   margin-bottom: 12px;
-  font-family: var(--main-font);
-  font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
 }
 
@@ -418,8 +422,8 @@ img {
 .modal-form__license-text {
   display: flex;
   font-family: var(--main-font);
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
   align-items: center;
@@ -471,6 +475,12 @@ img {
   background-color: #188CE8;
 }
 
+@media screen and (min-width: 1200px) {
+  .modal-form__license-text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 .email-form__message {
   font-weight: 700;
   font-size: 14px;

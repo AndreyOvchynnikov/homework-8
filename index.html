@@ -572,7 +572,7 @@
     <!-- ====== END FOOTER ====== -->
 
     <!-- ======== MODAL ======== -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal-window">
             <button type="button" class="modal-window__close-btn" data-modal-close>
                 <svg width="18px" height="18px">
@@ -608,19 +608,21 @@
                 <label class="modal-form__label">Комментарий
                     <textarea name="user-message" class="modal-form__textarea" placeholder="Введите текст"></textarea>
                 </label>
-                <input type="checkbox" id="user-license" class="modal-form__licensebox visually-hidden"
-                    name="licensebox">
-                <label class="modal-form__license-text" for="user-license">Соглашаюсь с рассылкой и принимаю&nbsp; <a
-                        href="" class="modal-form__license-link">Условия
-                        договора</a> </label>
+                <div class="modal-form__license-contiener">
+                    <input type="checkbox" id="user-license" class="modal-form__licensebox visually-hidden"
+                        name="licensebox">
+                    <label class="modal-form__license-text" for="user-license">Соглашаюсь с рассылкой и принимаю&nbsp;
+                        <a href="" class="modal-form__license-link">Условия
+                            договора</a> </label>
+                </div>
                 <button type="submit" class="modal-form__button">Отправить</button>
             </form>
         </div>
-    </div> -->
+    </div>
     <!-- ====== END MODAL ====== -->
     <script src="./js/mobile-menu.js"></script>
 
-    <!-- <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
